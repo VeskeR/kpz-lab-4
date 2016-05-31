@@ -17,6 +17,14 @@ Dialog::Dialog(QWidget *parent) :
     ui->cbModelExample->setModel(model);
 
     ui->listView->setEditTriggers(QAbstractItemView::AnyKeyPressed | QAbstractItemView::DoubleClicked);
+
+    sortingStrategyTypes = new QStringListModel(this);
+    QStringList strategyTypes;
+    strategyTypes << "Ascending Order" << "Descending Order";
+
+    sortingStrategyTypes->setStringList(strategyTypes);
+
+    ui->cbStrategies->setModel(sortingStrategyTypes);
 }
 
 Dialog::~Dialog()
@@ -57,4 +65,14 @@ void Dialog::on_pushButton_2_clicked()
 void Dialog::on_pushButton_4_clicked()
 {
     // Sort
+    QString s = ui->cbStrategies->currentText();
+    if (s == "Ascending Order")
+    {
+        sortStrategy = new AscendingSortStrategy();
+    }
+    else
+    {
+        sortStrategy = new DescendingSortStrategy();
+    }
+    sortStrategy->sort(model);
 }

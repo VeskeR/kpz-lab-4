@@ -1,6 +1,9 @@
 #ifndef DIALOG_H
 #define DIALOG_H
 
+#include "strategy.h"
+#include "ascendingsortstrategy.h"
+#include "descendingsortstrategy.h"
 #include <QtCore>
 #include <QtGui>
 #include <QDialog>
@@ -17,6 +20,9 @@ public:
     explicit Dialog(QWidget *parent = 0);
     ~Dialog();
     QStringListModel *model;
+    QStringListModel *sortingStrategyTypes;
+    SortStrategy *sortStrategy;
+
 
 private slots:
     void on_pushButton_clicked();

@@ -13,8 +13,14 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        dialog.cpp
+        dialog.cpp \
+    strategy.cpp \
+    ascendingsortstrategy.cpp \
+    descendingsortstrategy.cpp
 
-HEADERS  += dialog.h
+HEADERS  += dialog.h \
+    strategy.h \
+    ascendingsortstrategy.h \
+    descendingsortstrategy.h
 
 FORMS    += dialog.ui
