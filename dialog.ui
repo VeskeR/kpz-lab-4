@@ -59,7 +59,7 @@
        <string>Sorting Strategy</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox_2"/>
+     <widget class="QComboBox" name="cbStrategies"/>
     </widget>
    </item>
    <item>
@@ -72,7 +72,7 @@
        <string>Example of binded model</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox"/>
+     <widget class="QComboBox" name="cbModelExample"/>
     </widget>
    </item>
   </layout>
