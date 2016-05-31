@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>401</width>
+    <height>408</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,10 +40,40 @@
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string>Sort</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item>
-    <widget class="QComboBox" name="comboBox"/>
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Sorting Strategy</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_2"/>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSplitter" name="splitter_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Example of binded model</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox"/>
+    </widget>
    </item>
   </layout>
  </widget>
