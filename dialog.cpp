@@ -27,16 +27,31 @@ Dialog::~Dialog()
 void Dialog::on_pushButton_clicked()
 {
     // Create
+    int row = model->rowCount();
+    model->insertRows(row, 1);
+
+    QModelIndex index = model->index(row);
+
+    ui->listView->setCurrentIndex(index);
+    ui->listView->edit(index);
 }
 
 void Dialog::on_pushButton_3_clicked()
 {
-    // Update
+    // Insert
+    int row = ui->listView->currentIndex().row();
+    model->insertRows(row, 1);
+
+    QModelIndex index = model->index(row);
+
+    ui->listView->setCurrentIndex(index);
+    ui->listView->edit(index);
 }
 
 void Dialog::on_pushButton_2_clicked()
 {
     // Delete
+    model->removeRows(ui->listView->currentIndex().row(), 1);
 }
 
 void Dialog::on_pushButton_4_clicked()
